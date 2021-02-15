@@ -1,12 +1,15 @@
 package academy.belhard;
 import academy.belhard.*;
 
-public class Person extends Address{
+public class Person{
     public String firstName;
     public String lastName;
+    public Address address;
 
-    public Person(String city, String street, int houseNumber,String firstName,String lastName) {
-        super(city, street, houseNumber);
+
+
+    public Person(String firstName,String lastName, Address address) {
+        this.address = address;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -16,7 +19,9 @@ public class Person extends Address{
         return "Person: " + '\n' +
                 "FirstName - " + firstName + ", " +
                 "LastName - " + lastName + '\n' +
-                "Location info: " + getCity() +", ul."+ getStreet()+", #"+ getHouseNumber() +
+                "Location info: " + address.getCity() + address.getStreet() + address.getHouseNumber() +
                 '.' + '\n';
     }
+
+
 }
