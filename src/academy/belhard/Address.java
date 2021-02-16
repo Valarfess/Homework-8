@@ -1,6 +1,8 @@
 package academy.belhard;
 
-public class Address {
+import java.util.Comparator;
+
+public class Address implements Comparator {
     private String city;
     private String street;
     private int houseNumber;
@@ -14,4 +16,9 @@ public class Address {
     public String getCity() {return city;}
     public String getStreet() {return street;}
     public int getHouseNumber() {return houseNumber;}
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        return 0;
+    }
 }
