@@ -3,7 +3,7 @@ import academy.belhard.*;
 
 import java.util.Comparator;
 
-public class Person implements Comparator{
+public class Person{
     public String firstName;
     public String lastName;
     public Address address;
@@ -29,22 +29,15 @@ public class Person implements Comparator{
     @Override
     public String toString() {
         if (address != null)
-        return "Person: " + '\n' +
+        return  "\n" + "Person: " +
                 "FirstName - " + firstName + ", " +
-                "LastName - " + lastName + '\n' +
+                "LastName - " + lastName  +
                 "Location info: " + address.getCity() + ", ul." + address.getStreet() + ", #" + address.getHouseNumber() +
-                '.' + '\n';
-        else return ("address not exist");
+                '.';
+        else return ("\n" + "Person: " +
+                "FirstName - " + firstName + ", " +
+                "LastName - " + lastName + "\n" +
+                "Location info: empty.");
     }
 
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
-    }
-
-
-//    @Override
-//    public int compare(Person o1, Person o2) {
-//        return 0;
-//    }
 }

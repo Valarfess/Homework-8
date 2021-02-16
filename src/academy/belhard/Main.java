@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Address address1 = new Address("Minsk", "Matusevicha", 71);
         Address address2 = new Address("Minsk", "Odoevskogo", 54);
-        Address address3 = new Address("Minsk","Pushkina", 83);
+        Address address3 = new Address("Minsk","Pushkina", 37);
         Address address4 = new Address("Osipovichi", "Sovetskaya", 33);
         Address address5 = new Address("Petrikov","Oleshkina", 21);
 
@@ -27,15 +27,17 @@ public class Main {
             personClub.add(person5);
             personClub.add(person6);
 
-//        System.out.println(personClub);
+        System.out.println("До сортировки: " + personClub);
+        System.out.println("В списке " + personClub.size() + " объектов");
 
             List <Person> result = personClub
                 .stream()
-                .filter(x -> x.getFirstName() != null && x.getLastName() == null && x.getAddress() == null)
-                .sorted((s1,s2)-> s1.getAddress().getHouseNumber() - s2.getAddress().getHouseNumber())
+                .filter(x -> x.getFirstName() != null && x.getLastName() != null && x.getAddress() != null)
+                .sorted(Comparator.comparingInt(s -> s.getAddress().getHouseNumber()))
                 .collect(Collectors.toList());
 
-        System.out.println(result.isEmpty());
+        System.out.println("\n"+"\n"+"После сортировки: " + "\n" + result);
+        System.out.println("В списке " + personClub.size() + " объектов");
 
 
         // write your code here
