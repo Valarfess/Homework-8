@@ -37,7 +37,7 @@ public class Main {
                 .collect(Collectors.toList());
 
         System.out.println("\n"+"\n"+"После сортировки: " + "\n" + result);
-        System.out.println("В списке " + personClub.size() + " объектов");
+
 
 
         // write your code here
