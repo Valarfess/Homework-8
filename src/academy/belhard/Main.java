@@ -27,8 +27,8 @@ public class Main {
             personClub.add(person5);
             personClub.add(person6);
 
-        System.out.println("До сортировки: " + personClub);
-        System.out.println("В списке " + personClub.size() + " объектов");
+        personClub.forEach(System.out::print);
+        System.out.println();
 
             List <Person> result = personClub
                 .stream()
@@ -36,7 +36,7 @@ public class Main {
                 .sorted(Comparator.comparingInt(s -> s.getAddress().getHouseNumber()))
                 .collect(Collectors.toList());
 
-        System.out.println("\n"+"\n"+"После сортировки: " + "\n" + result);
+        result.forEach(System.out::print);
 
 
 

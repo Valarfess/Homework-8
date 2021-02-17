@@ -36,8 +36,7 @@ public class Person{
                 '.';
         else return ("\n" + "Person: " +
                 "FirstName - " + firstName + ", " +
-                "LastName - " + lastName + "\n" +
-                "Location info: empty.");
+                "LastName - " + lastName + ", Location info: empty.");
     }
 
 }
