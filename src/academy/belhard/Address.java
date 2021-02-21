@@ -13,9 +13,15 @@ public class Address {
         this.houseNumber = houseNumber;
     }
 
-    public String getCity() {return city;}
-    public String getStreet() {return street;}
-    public int getHouseNumber() {return houseNumber;}
+    public String getCity() {
+        return city;
+    }
+    public String getStreet() {
+        return street;
+    }
+    public int getHouseNumber() {
+        return houseNumber;
+    }
 
 
 }

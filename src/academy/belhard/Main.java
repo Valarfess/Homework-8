@@ -2,6 +2,8 @@ package academy.belhard;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class Main {
 
@@ -30,10 +32,11 @@ public class Main {
         personClub.forEach(System.out::print);
         System.out.println();
 
-            List <Person> result = personClub
+            List <String> result = personClub
                 .stream()
                 .filter(x -> x.getFirstName() != null && x.getLastName() != null && x.getAddress() != null)
                 .sorted(Comparator.comparingInt(s -> s.getAddress().getHouseNumber()))
+                .map(Person::toString)
                 .collect(Collectors.toList());
 
         result.forEach(System.out::print);

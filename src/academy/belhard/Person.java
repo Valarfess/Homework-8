@@ -8,6 +8,11 @@ public class Person{
     public String lastName;
     public Address address;
 
+    public Person(String firstName, String lastName, Address address) {
+        this.address = address;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -18,12 +23,6 @@ public class Person{
 
     public Address getAddress() {
         return address;
-    }
-
-    public Person(String firstName, String lastName, Address address) {
-        this.address = address;
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     @Override
